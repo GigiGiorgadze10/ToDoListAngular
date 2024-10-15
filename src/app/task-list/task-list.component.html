@@ -1,0 +1,18 @@
+<div class="task-container">
+    <h2>All Tasks</h2>
+    <input [(ngModel)]="newTaskTitle" placeholder="Add a new task inside 'All' category" />
+    <select [(ngModel)]="selectedCategory">
+      <option value="Uncategorized">Uncategorized</option>
+      <option value="Groceries">Groceries</option>
+      <option value="Payments">Payments</option>
+      <option value="College">College</option>
+    </select>
+    <button (click)="addTask()">Add Task</button>
+  
+    <ul>
+      <li *ngFor="let task of tasks">
+        <app-task-item [task]="task" (deleteTask)="deleteTask(task.id)"></app-task-item>
+      </li>
+    </ul>
+  </div>
+  
