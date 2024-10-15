@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms'; // Make sure FormsModule is imported for ngModel to work
+import { FormsModule } from '@angular/forms'; 
 
 import { AppComponent } from '../app.component';
 import { TaskListComponent } from '../task-list/task-list.component';
@@ -11,13 +11,13 @@ import { CategoryListComponent } from '../category-list/category-list.component'
     imports: [
       BrowserModule,
       FormsModule,
-      AppComponent,           // Import standalone components
-      TaskListComponent,      // Import standalone components
-      TaskItemComponent,      // Import standalone components
-      CategoryListComponent   // Import standalone components
+      AppComponent,         
+      TaskListComponent,      
+      TaskItemComponent,      
+      CategoryListComponent  
     ],
     providers: [],
-    bootstrap: [AppComponent]  // Keep AppComponent in bootstrap
+    bootstrap: [AppComponent] 
   })
   export class AppModule { }
 
