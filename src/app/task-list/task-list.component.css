@@ -1,21 +1,68 @@
 .task-container {
-    background-color: white;
-    border-radius: 10px;
+    display: flex;
+  }
+  
+  .category-list {
+    width: 20%;
+    background-color: #f46b66;
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 400px;
-    margin: 50px auto;
   }
   
-  input, select, button {
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid lightgray;
-  }
-  
-  ul {
-    list-style-type: none;
+  .category-list ul {
+    list-style: none;
     padding: 0;
+  }
+  
+  .category-list li {
+    padding: 10px 0;
+    color: white;
+    font-size: 1.2rem;
+  }
+  
+  .task-list {
+    width: 80%;
+    padding: 20px;
+  }
+  
+  .task-list h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+  
+  .task-list input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .task-item input {
+    margin-right: 10px;
+  }
+  
+  .completed-task {
+    text-decoration: line-through;
+  }
+  
+  .category-badge {
+    background-color: #f46b66;
+    color: white;
+    padding: 3px 10px;
+    border-radius: 5px;
+  }
+  
+  .delete-button {
+    background: none;
+    border: none;
+    color: #f46b66;
+    cursor: pointer;
   }
   

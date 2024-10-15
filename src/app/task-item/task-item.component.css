@@ -1,19 +1,25 @@
 .task-item {
+    list-style: none;
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0;
     display: flex;
     justify-content: space-between;
-    padding: 10px;
-    border-bottom: 1px solid #eee;
+    align-items: center;
   }
   
-  .completed {
+  .task-item input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  .completed-task {
     text-decoration: line-through;
+    color: #aaa;
   }
   
-  .category {
-    font-size: 0.8em;
-    background-color: #f44336;
-    color: white;
-    padding: 2px 8px;
-    border-radius: 10px;
+  .delete-button {
+    background: none;
+    border: none;
+    color: red;
+    cursor: pointer;
   }
   

@@ -21,10 +21,10 @@ import { CategoryListComponent } from '../category-list/category-list.component'
   })
   export class AppModule { }
 
-export interface Task {
-    id: number;
-    title: string;
+  export interface Task {
+    name: string;
     category: string;
     completed: boolean;
   }
+  
   
