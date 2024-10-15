@@ -1,4 +1,3 @@
-/* Individual task item styles */
 .task-item {
     display: flex;
     align-items: center;
@@ -6,19 +5,18 @@
   }
   
   .task-item label {
-    flex: 1; /* Allow label to take remaining space */
+    flex: 1;
   }
   
-  /* Button for deleting a task */
   .delete-button {
-    background: transparent; /* No background */
-    border: none; /* No border */
-    color: #e63946; /* Red color */
-    cursor: pointer; /* Pointer cursor */
-    font-size: 16px; /* Font size for delete button */
+    background: transparent; 
+    border: none; 
+    color: #e63946; 
+    cursor: pointer; 
+    font-size: 16px; 
   }
   
   .delete-button:hover {
-    color: #d62839; /* Darker red on hover */
+    color: #d62839;
   }
   

@@ -11,7 +11,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './task-item.component.css'
 })
 export class TaskItemComponent {
-  @Input() task: any; // Define task input
+  @Input() task: any;
   @Output() deleteTask = new EventEmitter<void>();
 
   onDelete() {
