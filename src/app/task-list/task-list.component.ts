@@ -12,11 +12,10 @@ import { CommonModule } from '@angular/common';
   styleUrl: './task-list.component.css'
 })
 export class TaskListComponent {
-  tasks: Task[] = []; // Define tasks as an array of Task objects
-  categories = ['All', 'Groceries', 'College', 'Payments']; // Example categories
-  selectedCategory = 'All'; // Default selected category
+  tasks: Task[] = [];
+  categories = ['All', 'Groceries', 'College', 'Payments']; 
+  selectedCategory = 'All';
 
-  // Add task function
   addTask(taskName: string, category: string) {
     if (taskName) {
       this.tasks.push({
@@ -27,20 +26,16 @@ export class TaskListComponent {
     }
   }
 
-  // Add category function
   addCategory(categoryName: string) {
     if (categoryName && !this.categories.includes(categoryName)) {
       this.categories.push(categoryName);
     }
   }
 
-  // Function to select a category
   selectCategory(category: string) {
     this.selectedCategory = category;
-    // Optionally, filter tasks by selected category here
   }
 
-  // Delete task function
   deleteTask(task: Task) {
     this.tasks = this.tasks.filter(t => t !== task);
   }
