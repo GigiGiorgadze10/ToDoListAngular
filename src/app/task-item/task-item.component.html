@@ -1,7 +1,6 @@
-<li class="task-item">
-    <input type="checkbox" *ngModel="task.completed" />
-    <span [ngClass]="{'completed-task': task.completed}">{{ task.name }}</span>
-    <span class="category-badge">{{ task.category }}</span>
-    <button class="delete-button" (click)="onDelete()">&#128465;</button>
-  </li>
+<div class="task-item">
+    <input type="checkbox" [(ngModel)]="task.completed" />
+    <label>{{ task.name }} ({{ task.category }})</label>
+    <button class="delete-button" (click)="onDelete()">🗑️</button>
+  </div>
   

@@ -1,28 +1,29 @@
-<div class="task-container">
-    <div class="category-list">
+<div class="container">
+    <!-- Sidebar for categories -->
+    <div class="sidebar">
+      <h2>Categories</h2>
       <ul>
-        <li>All</li>
-        <li>Groceries</li>
-        <li>College</li>
-        <li>Payments</li>
+        <li *ngFor="let category of categories" (click)="selectCategory(category)">
+          {{ category }}
+        </li>
       </ul>
+      <input type="text" #newCategory placeholder="Add new category" />
+      <button (click)="addCategory(newCategory.value); newCategory.value = ''">Add</button>
     </div>
   
+    <!-- Task list -->
     <div class="task-list">
-      <h2>All Tasks</h2>
-  
-      <input 
-        type="text" 
-        placeholder="Add a new task inside 'All' category" 
-        #taskInput 
-        (keyup.enter)="addTask(taskInput.value, 'Uncategorized'); taskInput.value = ''"/>
+      <h1>All Tasks</h1>
+      
+      <div class="add-task">
+        <input type="text" placeholder="Add a new task inside '{{ selectedCategory }}' category" #newTask />
+        <button (click)="addTask(newTask.value, selectedCategory); newTask.value = ''">Add</button>
+      </div>
   
       <ul>
-        <app-task-item 
-          *ngFor="let task of tasks" 
-          [task]="task" 
-          (deleteTask)="deleteTask(task)">
-        </app-task-item>
+        <li *ngFor="let task of tasks">
+          <app-task-item [task]="task" (deleteTask)="deleteTask(task)"></app-task-item>
+        </li>
       </ul>
     </div>
   </div>

@@ -1,25 +1,24 @@
+/* Individual task item styles */
 .task-item {
-    list-style: none;
-    padding: 10px;
-    border-bottom: 1px solid #e0e0e0;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    padding: 10px;
   }
   
-  .task-item input[type="checkbox"] {
-    margin-right: 10px;
+  .task-item label {
+    flex: 1; /* Allow label to take remaining space */
   }
   
-  .completed-task {
-    text-decoration: line-through;
-    color: #aaa;
-  }
-  
+  /* Button for deleting a task */
   .delete-button {
-    background: none;
-    border: none;
-    color: red;
-    cursor: pointer;
+    background: transparent; /* No background */
+    border: none; /* No border */
+    color: #e63946; /* Red color */
+    cursor: pointer; /* Pointer cursor */
+    font-size: 16px; /* Font size for delete button */
+  }
+  
+  .delete-button:hover {
+    color: #d62839; /* Darker red on hover */
   }
   

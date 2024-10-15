@@ -1,68 +1,95 @@
-.task-container {
-    display: flex;
+.container {
+    display: flex; /* Flexbox for sidebar and task list */
+    height: 100vh; /* Full height */
   }
   
-  .category-list {
-    width: 20%;
-    background-color: #f46b66;
+  /* Sidebar styles */
+  .sidebar {
+    width: 250px; /* Width for the sidebar */
     padding: 20px;
+    background-color: #fff; /* White background for sidebar */
+    border-right: 1px solid #ddd; /* Light border on the right */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   }
   
-  .category-list ul {
-    list-style: none;
+  /* Sidebar header */
+  .sidebar h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  /* Sidebar category list */
+  .sidebar ul {
+    list-style: none; /* Remove default list styling */
     padding: 0;
   }
   
-  .category-list li {
-    padding: 10px 0;
-    color: white;
-    font-size: 1.2rem;
-  }
-  
-  .task-list {
-    width: 80%;
-    padding: 20px;
-  }
-  
-  .task-list h2 {
-    font-size: 1.8rem;
-    font-weight: bold;
-  }
-  
-  .task-list input {
-    width: 100%;
+  .sidebar li {
     padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    cursor: pointer; /* Pointer cursor for list items */
   }
   
-  .task-item {
+  .sidebar li:hover {
+    background-color: #f0f0f0; /* Highlight on hover */
+  }
+  
+  /* Task list styles */
+  .task-list {
+    flex: 1; /* Fill remaining space */
+    padding: 20px;
+    background-color: #fefefe; /* White background for the task list */
+    border-radius: 8px; /* Rounded corners */
+  }
+  
+  /* Input area for adding new tasks */
+  .add-task {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .add-task input {
+    padding: 10px;
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 4px; /* Rounded corners */
+    flex: 1;
+    margin-right: 10px; /* Space between input and button */
+  }
+  
+  /* Button for adding new tasks */
+  .add-task button {
+    padding: 10px 15px;
+    background-color: #e63946; /* Red background */
+    color: white; /* White text */
+    border: none;
+    border-radius: 4px; /* Rounded corners */
+  }
+  
+  .add-task button:hover {
+    background-color: #d62839; /* Darker red on hover */
+  }
+  
+  /* Task list */
+  ul {
+    list-style: none; /* Remove default list styling */
+    padding: 0;
+  }
+  
+  li {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin-bottom: 10px;
+    justify-content: space-between; /* Space between checkbox and task name */
+    padding: 10px;
+    border-bottom: 1px solid #ddd; /* Light border for each task */
   }
   
-  .task-item input {
-    margin-right: 10px;
+  /* Task label */
+  label {
+    flex: 1; /* Allow label to take remaining space */
   }
   
-  .completed-task {
-    text-decoration: line-through;
-  }
-  
-  .category-badge {
-    background-color: #f46b66;
-    color: white;
-    padding: 3px 10px;
-    border-radius: 5px;
-  }
-  
-  .delete-button {
-    background: none;
-    border: none;
-    color: #f46b66;
-    cursor: pointer;
+  /* Checkbox styling */
+  input[type="checkbox"] {
+    margin-right: 10px; /* Space between checkbox and label */
   }
   

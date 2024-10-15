@@ -7,27 +7,41 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-task-list',
   standalone: true,
-  imports: [ TaskItemComponent, CommonModule],
+  imports: [TaskItemComponent, CommonModule],
   templateUrl: './task-list.component.html',
   styleUrl: './task-list.component.css'
 })
 export class TaskListComponent {
-  // Array of tasks
-  tasks: Task[] = [
-    { name: 'Get a new helmet', category: 'Uncategorized', completed: false },
-    { name: 'Purchase Milk & Corn Flakes', category: 'Groceries', completed: false },
-    { name: 'Pay mortgage', category: 'Payments', completed: false },
-    { name: 'Complete Assignments', category: 'College', completed: false },
-    { name: 'Replace laptop`s screen', category: 'Uncategorized', completed: false }
-  ];
+  tasks: Task[] = []; // Define tasks as an array of Task objects
+  categories = ['All', 'Groceries', 'College', 'Payments']; // Example categories
+  selectedCategory = 'All'; // Default selected category
 
-  deleteTask(taskToDelete: Task) {
-    this.tasks = this.tasks.filter(task => task !== taskToDelete);
-  }
-
+  // Add task function
   addTask(taskName: string, category: string) {
     if (taskName) {
-      this.tasks.push({ name: taskName, category: category, completed: false });
+      this.tasks.push({
+        name: taskName,
+        completed: false,
+        category: category,
+      });
     }
+  }
+
+  // Add category function
+  addCategory(categoryName: string) {
+    if (categoryName && !this.categories.includes(categoryName)) {
+      this.categories.push(categoryName);
+    }
+  }
+
+  // Function to select a category
+  selectCategory(category: string) {
+    this.selectedCategory = category;
+    // Optionally, filter tasks by selected category here
+  }
+
+  // Delete task function
+  deleteTask(task: Task) {
+    this.tasks = this.tasks.filter(t => t !== task);
   }
 }
